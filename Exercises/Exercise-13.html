@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise-13</title>
+    <link rel="stylesheet" href="">
+    <style>
+         body {
+        margin: 0;
+      }
+      #logo {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        margin-right: 12px;
+      }
+      #logo-container{
+        display: flex;
+        align-items: center;
+      }
+      header {
+        background-color: black;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px;
+      }
+      .nav-links{
+        display: flex;
+        list-style: none;
+      }
+      .nav-links li{
+        margin-right: 16px;
+      }
+      .nav-links li a{
+        text-decoration: none;
+        color: white;
+      }
+
+      #burger{
+        color: white;
+        font-size: 1.2rem;
+        cursor: pointer;
+        display: none;
+
+      }
+        @media screen and (max-width:575px) {
+            #burger{
+                display: block;
+            }
+            .navigatin{
+                display: none;
+            }
+            .logo-container > h3 {
+                display: none;
+            }
+        }
+        .menu-panel{
+            background-color: blue;
+            color: white;
+        }
+        .menu-panel ul{
+            list-style: none;
+            padding: 50px 20px;
+        }
+        .menu-panel ul li {
+            margin-bottom: 16px;
+        }
+    .close-btn{
+        
+    }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div id="logo-container">
+          <img id="logo" src="/assets/images/Profile-Photo.jpg" alt="logo" />
+          <h2>Sachini Imbulagoda</h2>
+        </div>
+        <nav class="navigation">
+          <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+
+        <i class="fa-solid fa-bars" id="burger" aria-hidden="true"></i>
+        
+        <nav class="menu-panel" id="menu-panel-id">
+            <button class="close-btn" id="btn-close"></button>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+        </nav>
+    </header>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson CSS-Media-Queries</title>
+    <style>
+        h1{
+            color: red;
+        }
+        p{
+            color: blue;
+        }
+
+        @media screen and (max-width:399px) {
+          h1{
+            text-align: center;
+            color: yellowgreen;
+          } 
+          p{
+            background-color: violet;
+          } 
+        }
+
+        @media screen and (min-width:500px) and (max-width:800px) {
+            h1{
+                text-align: center;
+                background-color: aqua;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Media Queries</h1>
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil unde libero sapiente corporis. 
+        Error provident iusto tempore vel quia magni fugit similique est expedita ipsam quisquam unde 
+        in voluptate, officia ea veritatis dignissimos quos asperiores odit molestias eaque exercitationem 
+        distinctio. Veritatis et quam voluptatem omnis. Quo assumenda sapiente illum corporis quasi cumque 
+        dolorem mollitia, nemo sequi porro cupiditate, quos explicabo doloribus, repudiandae natus provident 
+        eveniet! Quis cupiditate libero in consequuntur! Enim, animi ipsa repellendus rerum debitis voluptatibus 
+        accusamus commodi fuga aliquam iusto! Impedit ullam voluptate quam, corporis fugit soluta minima. 
+        Repellat dolor enim beatae odit eveniet magni necessitatibus rerum tenetur.
+    </p>
+</body>
+</html>

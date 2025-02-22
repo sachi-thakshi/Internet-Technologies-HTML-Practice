@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson CSS-Animations</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .box{
+            height: 100px;
+            width: 100px;
+            background-color:deeppink;
+
+            /* ----- properties ---- */
+            /* animation-name: down-up;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-delay:1s;
+            animation-iteration-count: infinite;  */
+            /* --- if want iterate one time then give count -> 1 ---*/
+
+           /* --- properties in one line --- */
+            /* animation: down-up 2s ease-in-out 1s infinite; */
+
+            /* animation: background-change 2s ease-in-out 0s infinite; */
+
+            animation: go-around 2s ease-in-out 0s infinite;
+        }
+
+
+        @keyframes go-around {
+            0%,
+            100%{
+                transform: translateX(0);
+            }
+            25%{
+                transform:translateX(200px) ;
+            }
+            50%{
+                transform: translateX(200px) translateY(200px);
+            }
+            75%{
+                transform: translateX(0) translateY(200px);
+            }
+            /* 100%{
+                transform: translateX(0); 
+            } */
+        }
+
+        /* ----------------------------------------------------------------------- */
+        /* @keyframes background-change {
+            0%{
+               background-color: goldenrod;
+            }
+            25%{
+                background-color: aqua;
+            }
+            50%{
+                background-color: red;
+            }
+            75%{
+                background-color: chartreuse;
+            }
+            100%{
+                background-color: goldenrod;
+            }
+        } */
+
+        /* ----------------------------------------------------------------------- */
+        /* inna eke idan anith ekata maru wenne  */
+        /* @keyframes background-change {
+            from{
+                background-color: blueviolet;
+            }
+            to{
+                background-color: tomato;
+            }
+        } */
+
+
+        /* ------------------------------------------------------------------------- */
+        /* ---------- @keyframes -- css at rules ---------------- */
+        /* @keyframes down-up{
+            0%{
+                transform: translateY(0);
+            }
+            50%{
+                transform: translateY(200px);
+            }
+            100%{
+                transform: translateY(0)
+            }   
+        } */
+         
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

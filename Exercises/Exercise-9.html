@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise - 9 </title>
+    <style>
+        body{
+            margin: 0;
+            background-color:aquamarine;
+        }
+        .container{
+            height: 100vh;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            
+        }
+        .mood-box{
+            width: 100px;
+            height: 100px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 0 10px gray;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.5s ease-in-out;
+        }
+        .mood-box:hover{
+            transform: scale(1.5);
+        }
+        .mood-emoji{
+            font-size: 40px;
+            transition: font-size 0.5s ease-in-out;
+        }
+        .mood-box:hover .mood-emoji{
+            font-size: 50px;
+        }
+        .mood-name{
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .mood-box:hover .mood-name{
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="mood-box">
+            <span class="mood-emoji">😁</span>
+            <span class="mood-name">Happy</span>
+        </div>
+        <div class="mood-box">
+            <span class="mood-emoji">😭</span>
+            <span class="mood-name">Criying</span>
+        </div>
+        <div class="mood-box">
+            <span class="mood-emoji">😍</span>
+            <span class="mood-name">Lovely</span>
+        </div>
+        <div class="mood-box">
+            <span class="mood-emoji">🤭</span>
+            <span class="mood-name">shy</span>
+        </div>
+    </div>
+    
+</body>
+</html>

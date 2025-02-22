@@ -35,7 +35,17 @@
             transform: translateX(100px);
             scale: 1.5;
         }
-        
+        .image-container{
+            width: 200px;
+            height: 200px;
+        }
+        .image{
+            width: 100%;
+            transition: transform 3s ease-in-out 1s;
+        }
+        .image-container:hover .image{
+            transform: scale(1.5) rotate(360deg);
+        }
     </style>
 </head>
 <body>
@@ -43,5 +53,10 @@
     <br/>
     <hr/>
     <div class="circle"></div>
+
+    <br/>
+    <div class="image-container">
+        <img class="image" src="/assets/images/rottweiler.avif" alt="dog">
+    </div>
 </body>
 </html>

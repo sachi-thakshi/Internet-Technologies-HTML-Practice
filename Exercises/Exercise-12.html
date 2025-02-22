@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise-12</title>
+    <style>
+        body{
+            margin: 5px;
+            background-color: turquoise;
+        }
+        h1{
+            text-align: center;
+            color: black;
+            font-weight: bolder;
+        }
+        .laptop-image{
+            width: 20vw;
+            height: 15vh;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-right: 12px;
+            margin-left: 12px;
+        }
+        .card {
+            background-color: white;
+            padding: 16px;
+            box-shadow: 0 0 10px gray ;
+            border-radius: 12px;
+        }
+        .laptop-details {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .laptop-review {
+            background-color: white;
+            padding: 16px;
+            border-radius: 12px;
+            height: 200px;
+            overflow-y: scroll;
+        }
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+        .h2{
+            text-align: left;
+        }
+        .price{
+            display: flex;
+            justify-content: space-between;
+        }
+        .buttons{
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            position: sticky;
+        }
+        .buy-btn{
+            background-color: blue;
+            height: 5vh;
+            border-radius: 10px;
+            font-size: 20px;
+            color: white;
+        }
+        .add-to-cart-btn{
+            background-color: black;
+            height: 5vh;
+            border-radius: 10px;
+            font-size: 20px;
+            color: white;
+        }
+        @media screen and (min-width:0px) and (max-width:575px) {
+            .card-container {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                gap: 12px;
+            }
+        }
+        @media screen and (min-width:576px) and (max-width:767px) {
+            .card-container {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+            }
+        }
+        
+        @media screen and (min-width:768px) and (max-width:991px) {
+            .card-container {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 12px;
+            }
+        }
+        @media screen and (min-width:992px) and (max-width:1199px) {
+            .card-container {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 12px;
+            }
+        }
+        @media screen and (min-width:1200px) and (max-width:1399px) {
+            .card-container {
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                gap: 12px;
+            }
+        }
+        @media screen and (max-width:1400px) {
+            .card-container {
+                display: grid;
+                grid-template-columns: repeat(6, 1fr);
+                gap: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1> Product Gallery </h1>
+    <div class="card-container">
+
+        <div class="card">
+            <div class="laptop-details">
+                    <img class="laptop-image" src="/assets/images/laptop-img.png" alt="laptop-image"/>
+            </div>
+            <div class="price">
+                <h2>Laptop</h2>
+                <h3>$399.99</h3>
+          </div>
+            <div class="laptop-review">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+                debitis cumque, deserunt provident quis recusandae incidunt iste
+                harum aspernatur repudiandae id omnis officiis? Nam enim tempora
+                error dolorum. Quia suscipit quos quis autem laboriosam modi
+                numquam? Incidunt modi architecto tenetur.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+                debitis cumque, deserunt provident quis recusandae incidunt iste
+                harum aspernatur repudiandae id omnis officiis? Nam enim tempora
+                error dolorum. Quia suscipit quos quis autem laboriosam modi
+                numquam? Incidunt modi architecto tenetur.
+              </p>
+            </div>
+            <div class="buttons">
+                <button class="buy-btn">Buy Now</button>
+                <button class="add-to-cart-btn"> Add To Cart    </button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="laptop-details">
+                    <img class="laptop-image" src="/assets/images/laptop-img.png" alt="laptop-image"/>
+            </div>
+            <div class="price">
+                <h2>Laptop</h2>
+                <h3>$399.99</h3>
+          </div>
+            <div class="laptop-review">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+                debitis cumque, deserunt provident quis recusandae incidunt iste
+                harum aspernatur repudiandae id omnis officiis? Nam enim tempora
+                error dolorum. Quia suscipit quos quis autem laboriosam modi
+                numquam? Incidunt modi architecto tenetur.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+                debitis cumque, deserunt provident quis recusandae incidunt iste
+                harum aspernatur repudiandae id omnis officiis? Nam enim tempora
+                error dolorum. Quia suscipit quos quis autem laboriosam modi
+                numquam? Incidunt modi architecto tenetur.
+              </p>
+            </div>
+            <div class="buttons">
+                <button class="buy-btn">Buy Now</button>
+                <button class="add-to-cart-btn"> Add To Cart    </button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="laptop-details">
+                    <img class="laptop-image" src="/assets/images/laptop-img.png" alt="laptop-image"/>
+            </div>
+            <div class="price">
+                <h2>Laptop</h2>
+                <h3>$399.99</h3>
+          </div>
+            <div class="laptop-review">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+                debitis cumque, deserunt provident quis recusandae incidunt iste
+                harum aspernatur repudiandae id omnis officiis? Nam enim tempora
+                error dolorum. Quia suscipit quos quis autem laboriosam modi
+                numquam? Incidunt modi architecto tenetur.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+                debitis cumque, deserunt provident quis recusandae incidunt iste
+                harum aspernatur repudiandae id omnis officiis? Nam enim tempora
+                error dolorum. Quia suscipit quos quis autem laboriosam modi
+                numquam? Incidunt modi architecto tenetur.
+              </p>
+            </div>
+            <div class="buttons">
+                <button class="buy-btn">Buy Now</button>
+                <button class="add-to-cart-btn"> Add To Cart    </button>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="laptop-details">
+                    <img class="laptop-image" src="/assets/images/laptop-img.png" alt="laptop-image"/>
+            </div>
+            <div class="price">
+                <h2>Laptop</h2>
+                <h3>$399.99</h3>
+          </div>
+            <div class="laptop-review">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+                debitis cumque, deserunt provident quis recusandae incidunt iste
+                harum aspernatur repudiandae id omnis officiis? Nam enim tempora
+                error dolorum. Quia suscipit quos quis autem laboriosam modi
+                numquam? Incidunt modi architecto tenetur.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+                debitis cumque, deserunt provident quis recusandae incidunt iste
+                harum aspernatur repudiandae id omnis officiis? Nam enim tempora
+                error dolorum. Quia suscipit quos quis autem laboriosam modi
+                numquam? Incidunt modi architecto tenetur.
+              </p>
+            </div>
+            <div class="buttons">
+                <button class="buy-btn">Buy Now</button>
+                <button class="add-to-cart-btn"> Add To Cart    </button>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="laptop-details">
+                    <img class="laptop-image" src="/assets/images/laptop-img.png" alt="laptop-image"/>
+            </div>
+            <div class="price">
+                <h2>Laptop</h2>
+                <h3>$399.99</h3>
+          </div>
+            <div class="laptop-review">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+                debitis cumque, deserunt provident quis recusandae incidunt iste
+                harum aspernatur repudiandae id omnis officiis? Nam enim tempora
+                error dolorum. Quia suscipit quos quis autem laboriosam modi
+                numquam? Incidunt modi architecto tenetur.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+                debitis cumque, deserunt provident quis recusandae incidunt iste
+                harum aspernatur repudiandae id omnis officiis? Nam enim tempora
+                error dolorum. Quia suscipit quos quis autem laboriosam modi
+                numquam? Incidunt modi architecto tenetur.
+              </p>
+            </div>
+            <div class="buttons">
+                <button class="buy-btn">Buy Now</button>
+                <button class="add-to-cart-btn"> Add To Cart    </button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="laptop-details">
+                    <img class="laptop-image" src="/assets/images/laptop-img.png" alt="laptop-image"/>
+            </div>
+            <div class="price">
+                <h2>Laptop</h2>
+                <h3>$399.99</h3>
+          </div>
+            <div class="laptop-review">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+                debitis cumque, deserunt provident quis recusandae incidunt iste
+                harum aspernatur repudiandae id omnis officiis? Nam enim tempora
+                error dolorum. Quia suscipit quos quis autem laboriosam modi
+                numquam? Incidunt modi architecto tenetur.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+                debitis cumque, deserunt provident quis recusandae incidunt iste
+                harum aspernatur repudiandae id omnis officiis? Nam enim tempora
+                error dolorum. Quia suscipit quos quis autem laboriosam modi
+                numquam? Incidunt modi architecto tenetur.
+              </p>
+            </div>
+            <div class="buttons">
+                <button class="buy-btn">Buy Now</button>
+                <button class="add-to-cart-btn"> Add To Cart    </button>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="laptop-details">
+                    <img class="laptop-image" src="/assets/images/laptop-img.png" alt="laptop-image"/>
+            </div>
+            <div class="price">
+                <h2>Laptop</h2>
+                <h3>$399.99</h3>
+          </div>
+            <div class="laptop-review">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+                debitis cumque, deserunt provident quis recusandae incidunt iste
+                harum aspernatur repudiandae id omnis officiis? Nam enim tempora
+                error dolorum. Quia suscipit quos quis autem laboriosam modi
+                numquam? Incidunt modi architecto tenetur.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+                debitis cumque, deserunt provident quis recusandae incidunt iste
+                harum aspernatur repudiandae id omnis officiis? Nam enim tempora
+                error dolorum. Quia suscipit quos quis autem laboriosam modi
+                numquam? Incidunt modi architecto tenetur.
+              </p>
+            </div>
+            <div class="buttons">
+                <button class="buy-btn">Buy Now</button>
+                <button class="add-to-cart-btn"> Add To Cart    </button>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="laptop-details">
+                    <img class="laptop-image" src="/assets/images/laptop-img.png" alt="laptop-image"/>
+            </div>
+            <div class="price">
+                <h2>Laptop</h2>
+                <h3>$399.99</h3>
+          </div>
+            <div class="laptop-review">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+                debitis cumque, deserunt provident quis recusandae incidunt iste
+                harum aspernatur repudiandae id omnis officiis? Nam enim tempora
+                error dolorum. Quia suscipit quos quis autem laboriosam modi
+                numquam? Incidunt modi architecto tenetur.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+                debitis cumque, deserunt provident quis recusandae incidunt iste
+                harum aspernatur repudiandae id omnis officiis? Nam enim tempora
+                error dolorum. Quia suscipit quos quis autem laboriosam modi
+                numquam? Incidunt modi architecto tenetur.
+              </p>
+            </div>
+            <div class="buttons">
+                <button class="buy-btn">Buy Now</button>
+                <button class="add-to-cart-btn"> Add To Cart    </button>
+            </div>
+        </div>
+
+        
+        
+    </div>
+</body>
+</html>
