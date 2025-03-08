@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise-14</title>
+</head>
+<body>
+    <h1>Simple Calculator</h1>
+
+    <input type="text" id="input-field">
+
+    <button onclick="calculate()">Calculate</button>
+    <p>Result: <span id="result"></span></p>
+
+    <script>
+        function calculate(){
+            // console.log ("Calculate function clicked.");
+            let expression =  document.getElementById('input-field').value;
+            // ---let value = expression.value -> one line like the above = .value
+            console.log (expression);
+
+            try {
+                let result = eval(expression); // eval -> evaluates the mathematical expressions
+                console.log(result);
+                document.getElementById('result').innerText = result;
+            } catch (error) {
+                document.getElementById('result').innerText = "Invalid Expression catched.";
+            }
+            
+        }
+        
+    </script>
+</body>
+</html>
