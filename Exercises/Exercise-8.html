@@ -1,215 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercise-8</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 08</title>
     <style>
-        body{
-                margin: 0;
-        }
-        h1{
-            text-align: center;
-            margin-top: 50px;
-        }
-        .box1{
-            margin: 5px;
-            /* width: 400px; */
-            height: 300px;
-            background-color: wheat;
-            border: 1px solid black;
-            border-radius: 5%;
-            
-        }
-        .box2{
-            margin: 10px;
-            /* width: 350px; */
-            height: 200px;
-            background-color: white;
-            border-radius: 5%;
-            position: relative;
-            overflow-y: scroll;
-            
-            
-        }
-        .details{
-            margin: 10px;
-            text-align: left;
-            position: relative;
-            top: 50px;
-        }
-        img{
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            position: relative;
-            top: 10px;
-            /* left: 10px; */
-            border: 1px solid black;
-        }
-        h4{
-            position: relative;
-            top: 10px;
-            left: 10px;
-        }
-        .name{
-            /* position: absolute; */
-            /* left: 100px;
-            top: 120px;
-            left: 100px; */
-            /* padding: px; */
-        }
-        .hero-image{
-            display: flex;
-            padding: 10px;        
-        }
-        .stars{
-            position: relative;
-            top: 12px;
-            left: 30px;
-        }
-        .review{
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 12px 24px;
-        }
-        .review > div{
-            padding: 10px;
-            
-        }
+      body {
+        margin: 0;
+      }
+      h1 {
+        text-align: center;
+      }
+      .customer-image {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        border: 1px solid black;
+        border-radius: 50%;
+        margin-right: 12px;
+      }
+      .personal-info {
+        display: flex;
+      }
+      .card {
+        background-color: wheat;
+        padding: 16px;
+        border: 1px solid black;
+        border-radius: 12px;
+      }
+      .customer-details {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .customer-review {
+        background-color: white;
+        padding: 16px;
+        border-radius: 12px;
+        height: 200px;
+        overflow-y: scroll;
+      }
+      .card-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Customer Reviews</h1>
-
-    <div class="review">
-
-        <div class="box1">
-            <div class="hero-image">
-                <img src="/assets/images/Profile-Photo.jpg" alt="profile-photo">
-                <h4 class="name">Sachini Imbulagoda</h4>
-                <div class="stars">
-                    <p>⭐️⭐️⭐️⭐️⭐️</p>
-                </div>
-            </div>
-            
-            <div class="box2">
-               <p class="details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt praesentium sapiente quam 
-                quisquam natus temporibus blanditiis veritatis. In ducimus et aut molestias delectus accusamus alias velit cumque 
-                necessitatibus officiis omnis, fuga rerum placeat. Natus incidunt dolorem molestiae laborum non, illum placeat id. 
-                Repellat, aperiam corrupti, porro praesentium aliquid quod obcaecati sed iusto vitae, quo id! Fugiat voluptate neque 
-                aspernatur atque maxime impedit quod amet ratione. Vitae quas suscipit, voluptas culpa distinctio quaerat ducimus eum 
-                itaque expedita quia, blanditiis minus doloribus excepturi rem voluptatem accusamus maiores obcaecati recusandae sit 
-                similique, ea amet harum pariatur. Nemo unde reiciendis cupiditate eum, nobis quia.
-                rem dignissimos adipisci iste omnis! Error illo esse odio quod facere perferendis eligendi aut ad dolor nam!
-                </p> 
-            </div>
+    <div class="card-container">
+      <div class="card">
+        <div class="customer-details">
+          <div class="personal-info">
+            <img
+              class="customer-image"
+              src="/assets/images/Profile-Photo.jpg"
+              alt="customer-image"
+            />
+            <h4>Sachini Imbulagoda</h4>
+          </div>
+          <span>⭐️⭐️⭐️⭐️⭐️</span>
         </div>
-
-        <div class="box1">
-            <div class="hero-image">
-                <img src="/assets/images/Profile-Photo.jpg" alt="profile-photo">
-                <h4 class="name">Sachini Imbulagoda</h4>
-                <div class="stars">
-                    <p>⭐️⭐️⭐️⭐️⭐️</p>
-                </div>
-            </div>
-            
-            <div class="box2">
-               <p class="details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt magnam suscipit enim maxime 
-                rem dignissimos adipisci iste omnis! Error illo esse odio quod facere perferendis eligendi aut ad dolor nam!
-                </p> 
-            </div>
+        <div class="customer-review">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+            debitis cumque, deserunt provident quis recusandae incidunt iste
+            harum aspernatur repudiandae id omnis officiis? Nam enim tempora
+            error dolorum. Quia suscipit quos quis autem laboriosam modi
+            numquam? Incidunt modi architecto tenetur.
+          </p>
         </div>
-
-
-        <div class="box1">
-            <div class="hero-image">
-                <img src="/assets/images/Profile-Photo.jpg" alt="profile-photo">
-                <h4 class="name">Sachini Imbulagoda</h4>
-                <div class="stars">
-                    <p>⭐️⭐️⭐️⭐️⭐️</p>
-                </div>
-            </div>
-            
-            <div class="box2">
-               <p class="details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt magnam suscipit enim maxime 
-                rem dignissimos adipisci iste omnis! Error illo esse odio quod facere perferendis eligendi aut ad dolor nam!
-                </p> 
-            </div>
+      </div>
+      <div class="card">
+        <div class="customer-details">
+          <div class="personal-info">
+            <img
+              class="customer-image"
+              src="/assets/images/Profile-Photo.jpg"
+              alt="customer-image"
+            />
+            <h4>Sachini Imbulagoda</h4>
+          </div>
+          <span>⭐️⭐️⭐️⭐️⭐️</span>
         </div>
-
-
-        <div class="box1">
-            <div class="hero-image">
-                <img src="/assets/images/Profile-Photo.jpg" alt="profile-photo">
-                <h4 class="name">Sachini Imbulagoda</h4>
-                <div class="stars">
-                    <p>⭐️⭐️⭐️⭐️⭐️</p>
-                </div>
-            </div>
-            
-            <div class="box2">
-               <p class="details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt magnam suscipit enim maxime 
-                rem dignissimos adipisci iste omnis! Error illo esse odio quod facere perferendis eligendi aut ad dolor nam!
-                </p> 
-            </div>
+        <div class="customer-review">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+            debitis cumque, deserunt provident quis recusandae incidunt iste
+            harum aspernatur repudiandae id omnis officiis? Nam enim tempora
+            error dolorum. Quia suscipit quos quis autem laboriosam modi
+            numquam? Incidunt modi architecto tenetur. Lorem ipsum dolor sit
+            amet consectetur adipisicing elit. Ipsum debitis cumque, deserunt
+            provident quis recusandae incidunt iste harum aspernatur repudiandae
+            id omnis officiis? Nam enim tempora error dolorum. Quia suscipit
+            quos quis autem laboriosam modi numquam? Incidunt modi architecto
+            tenetur.
+          </p>
         </div>
-
-
-        <div class="box1">
-            <div class="hero-image">
-                <img src="/assets/images/Profile-Photo.jpg" alt="profile-photo">
-                <h4 class="name">Sachini Imbulagoda</h4>
-                <div class="stars">
-                    <p>⭐️⭐️⭐️⭐️⭐️</p>
-                </div>
-            </div>
-            
-            <div class="box2">
-               <p class="details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt magnam suscipit enim maxime 
-                rem dignissimos adipisci iste omnis! Error illo esse odio quod facere perferendis eligendi aut ad dolor nam!
-                </p> 
-            </div>
+      </div>
+      <div class="card">
+        <div class="customer-details">
+          <div class="personal-info">
+            <img
+              class="customer-image"
+              src="/assets/images/Profile-Photo.jpg"
+              alt="customer-image"
+            />
+            <h4>Sachini Imbulagoda</h4>
+          </div>
+          <span>⭐️⭐️⭐️⭐️⭐️</span>
         </div>
-
-
-        <div class="box1">
-            <div class="hero-image">
-                <img src="/assets/images/Profile-Photo.jpg" alt="profile-photo">
-                <h4 class="name">Sachini Imbulagoda</h4>
-                <div class="stars">
-                    <p>⭐️⭐️⭐️⭐️⭐️</p>
-                </div>
-            </div>
-            
-            <div class="box2">
-               <p class="details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt magnam suscipit enim maxime 
-                rem dignissimos adipisci iste omnis! Error illo esse odio quod facere perferendis eligendi aut ad dolor nam!
-                </p> 
-            </div>
+        <div class="customer-review">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+            debitis cumque, deserunt provident quis recusandae incidunt iste
+            harum aspernatur repudiandae id omnis officiis? Nam enim tempora
+            error dolorum. Quia suscipit quos quis autem laboriosam modi
+            numquam? Incidunt modi architecto tenetur.
+          </p>
         </div>
-
-
-        <div class="box1">
-            <div class="hero-image">
-                <img src="/assets/images/Profile-Photo.jpg" alt="profile-photo">
-                <h4 class="name">Sachini Imbulagoda</h4>
-                <div class="stars">
-                    <p>⭐️⭐️⭐️⭐️⭐️</p>
-                </div>
-            </div>
-            
-            <div class="box2">
-               <p class="details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt magnam suscipit enim maxime 
-                rem dignissimos adipisci iste omnis! Error illo esse odio quod facere perferendis eligendi aut ad dolor nam!
-                </p> 
-            </div>
+      </div>
+      <div class="card">
+        <div class="customer-details">
+          <div class="personal-info">
+            <img
+              class="customer-image"
+              src="/assets/images/Profile-Photo.jpg"
+              alt="customer-image"
+            />
+            <h4>Sachini Imbulagoda</h4>
+          </div>
+          <span>⭐️⭐️⭐️⭐️⭐️</span>
         </div>
-
-        
+        <div class="customer-review">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+            debitis cumque, deserunt provident quis recusandae incidunt iste
+            harum aspernatur repudiandae id omnis officiis? Nam enim tempora
+            error dolorum. Quia suscipit quos quis autem laboriosam modi
+            numquam? Incidunt modi architecto tenetur.
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="customer-details">
+          <div class="personal-info">
+            <img
+              class="customer-image"
+              src="/assets/images/Profile-Photo.jpg"
+              alt="customer-image"
+            />
+            <h4>Sachini Imbulagoda</h4>
+          </div>
+          <span>⭐️⭐️⭐️⭐️⭐️</span>
+        </div>
+        <div class="customer-review">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+            debitis cumque, deserunt provident quis recusandae incidunt iste
+            harum aspernatur repudiandae id omnis officiis? Nam enim tempora
+            error dolorum. Quia suscipit quos quis autem laboriosam modi
+            numquam? Incidunt modi architecto tenetur.
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="customer-details">
+          <div class="personal-info">
+            <img
+              class="customer-image"
+              src="/assets/images/Profile-Photo.jpg"
+              alt="customer-image"
+            />
+            <h4>Sachini Imbulagoda</h4>
+          </div>
+          <span>⭐️⭐️⭐️⭐️⭐️</span>
+        </div>
+        <div class="customer-review">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+            debitis cumque, deserunt provident quis recusandae incidunt iste
+            harum aspernatur repudiandae id omnis officiis? Nam enim tempora
+            error dolorum. Quia suscipit quos quis autem laboriosam modi
+            numquam? Incidunt modi architecto tenetur.
+          </p>
+        </div>
+      </div>
     </div>
-        
-        
-</body>
+  </body>
 </html>

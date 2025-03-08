@@ -1,93 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercise-7</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 07</title>
     <style>
-        body{
-            background-color: #d4a2c9;
-            margin: 0;
-        }
-        img{
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            margin-top: 20px;
-            margin-left: 10px;
-        }
-        
-        header {
-            height: 80px;
-            background: #470639;
-            color: #fff;
-            padding: 15px;
-
-            position: sticky;
-            top: 0;
-        }
-        .navigations{
-            display: flex;
-            justify-content:space-between;
-            align-items: center;
-            margin-right: 10px;
-            margin-left: 10px;
-            justify-content: flex-end;
-            position: absolute;
-            right: 0;
-            top: 25px;
-        }
-        a{
-            color: #fff;
-            text-decoration: none;
-            padding: 10px;
-        }
-        .name{
-            position: absolute;
-            left: 100px;
-            top: 30px;
-        }
-        .profile{
-            background-color: #f3e9d2;
-            height: 800px;
-            position: absolute;
-            margin-top: 100px;
-            top:100px;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
+      body {
+        margin: 0;
+        background-color: wheat;
+      }
+      #logo {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 1px solid black;
+        margin-right: 12px;
+      }
+      #logo-container {
+        display: flex;
+      }
+      header {
+        background-color: #333;
+        width: 100%;
+        height: 8vh;
+        color: wheat;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px;
+        position: fixed;
+        top: 0;
+        left: 0;
+      }
+      nav > ul {
+        display: flex;
+        list-style: none;
+      }
+      nav > ul > li {
+        margin: 0 40px;
+      }
+      nav > ul > li > a {
+        color: wheat;
+        text-decoration: none;
+      }
+      #hero-section {
+        display: flex;
+        margin-top: 11vh;
+      }
+      #hero-content {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 24px;
+      }
+      #hero-image {
+        width: 50%;
+        height: 80vh;
+        object-fit: cover;
+        border-top-left-radius: 10%;
+        border-bottom-left-radius: 10%;
+      }
+      #more-btn {
+        background-color: #333;
+        color: wheat;
+        padding: 12px;
+        border-radius: 12px;
+      }
+      #social-media {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+      #social-media img {
+        width: 32px;
+        height: 32px;
+        border-radius: 12px;
+        margin: 0 12px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-            <div class="logo">
-                <img src="/assets/images/Profile-Photo.jpg" alt="logo" width="40px" height="40px">
-            </div>
-            <p class="name">Sachini Imbulagoda</p>
-
-                <nav class="navigations">
-                        <a href="#">Home</a>
-                        <a href="#">About</a>
-                        <a href="#">Services</a>
-                        <a href="#">Contact Us</a>
-                </nav>
+      <div id="logo-container">
+        <img id="logo" src="/assets/images/Profile-Photo.jpg" alt="logo" />
+        <h3>Sachini Imbulagoda</h3>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
     </header>
-
-    <div id="body">
-        <section class="head">
-            <div>
-                <h1>Home Page</h1>
-                <p>Welcome to my Home Page</p>
-            </div>
-        </section>
-            
-       <section class="profile">
-             <h1>Content</h1>
-             <p>Here is the content of the page</p>
-       </section>
-    </div>
-    
-    
-</body>
+    <main>
+      <section id="hero-section">
+        <div id="hero-content">
+          <h1>Welcome to my web site</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos et
+            velit placeat iusto sit. Dignissimos ex reiciendis atque dolore ad
+            natus magnam laboriosam aut cumque illum quisquam earum omnis
+            obcaecati modi doloribus aliquam assumenda quis aspernatur velit
+            recusandae id magni incidunt, delectus quia! Quos sequi temporibus
+            tempore, in doloremque sed eius impedit. Tenetur, omnis! Maxime
+            mollitia harum rem facilis corrupti provident eligendi doloribus
+            repudiandae? Rerum dolorum aperiam hic eum perspiciatis illo neque
+            obcaecati, voluptate quas incidunt. Vero, consectetur. Labore
+            voluptas quasi totam dolorum sapiente, perferendis voluptatibus
+            laborum? Non provident dignissimos dolores laudantium, vitae maxime
+            ipsum veritatis, recusandae ipsam velit esse.
+          </p>
+          <button id="more-btn">More Info</button>
+          <div id="social-media">
+            <a href="#" target="_blank">
+              <img src="/assets/images/facebook.png" alt="facebook-icon" />
+            </a>
+            <a href="#" target="_blank">
+              <img src="/assets/images/linkedin.png" alt="linkedin-icon" />
+            </a>
+            <a href="#" target="_blank">
+              <img src="/assets/images/instagram.png" alt="instagram-icon" />
+            </a>
+            <a href="#" target="_blank">
+              <img src="/assets/images/github.png" alt="github-icon" />
+            </a>
+          </div>
+        </div>
+        <img
+          id="hero-image"
+          src="/assets/images/Profile-Photo.jpg"
+          alt="prof-image"
+        />
+      </section>
+    </main>
+  </body>
 </html>
