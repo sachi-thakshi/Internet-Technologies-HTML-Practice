@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise - 16</title>
+    <style>
+        .container{
+            display: flex;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            display: inline-block;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+   
+    <script>
+        let boxes = document.querySelectorAll('.box');
+        let currentIndex = 0;
+        // let currentIndex2 = 1;    // ------------------------------> This is the second way
+
+        function changeColor(){
+            boxes.forEach((box) => {
+                box.style.backgroundColor = 'white';
+            });
+            boxes[currentIndex].style.backgroundColor = 'red';
+
+            // boxes[currentIndex2].style.backgroundColor = 'blue';  // ------------------------------> This is the second way
+            // currentIndex2 = (currentIndex2 + 1) % boxes.length;
+
+            let previousIndex = (currentIndex - 1 + boxes.length) % boxes.length;  // ------------------------------> This is the first way
+            boxes[previousIndex].style.backgroundColor = 'blue';
+            
+            currentIndex = (currentIndex + 1) % boxes.length;
+            // currentIndex = 1%5 = 1; 
+            // currentIndex = 2%5 = 2;
+            // currentIndex = 3%5 = 3;
+            // currentIndex = 4%5 = 4;
+            // currentIndex = 5%5 = 0;
+        }
+        setInterval(changeColor, 1000);
+    </script>
+</body>
+</html>

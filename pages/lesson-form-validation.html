@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson-Form-Validation</title>
+</head>
+<style>
+    body{
+        display: flex;
+        flex-direction: column; /* Align children vertically */
+        align-items: center;
+        margin: 0;
+        font-size: 18px;
+        font-family: Arial, sans-serif;
+    }
+    .container{
+        margin-top: 20px;
+        border: 2px solid black;
+        width: 500px;
+        height: 600px;
+        padding: 20px;
+        border-radius: 5px;
+    }
+
+    #reg-btn{
+        background-color: blue;
+        color: white;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        width: 100px;
+    }
+    input{
+        width: 90%;
+        padding: 10px;
+    }
+    /* input:hover{
+        border-color: blue;
+    } */
+    label{
+        font-weight: bold;
+    }
+    h1{
+        font-size: 35px;
+        font-weight: bolder;
+    }
+    .error{
+        color: red;
+        margin-top: 2px;
+        font-size: 15px;
+        height: 16px;
+    }
+    .input-group{
+        margin-bottom: 30px;
+    }
+
+    .table-container{
+        margin-left: 20px;
+        width: 500px;
+        padding: 20px;
+        margin-top: 20px;
+        border: 1px solid black;
+        border-radius: 10px;
+    }
+    th, td{
+        border: 1px solid black;
+        text-align: left;
+        padding: 8px;
+    }
+    h2{
+        text-align: center;
+    }
+    table{
+        width: 100%;
+        border-collapse: collapse;
+        
+    }
+    th{
+        background-color: blue;
+        color: white;
+    }
+</style>
+<body>
+   <div class="container">
+       
+       <form action="" id="form">
+            <h1>Customer Registration</h1>
+
+            <div class="input-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name">
+                <span class="error" id="fullNameError"></span>
+            </div>
+          
+           <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+                <span class="error" id="emailError"></span>
+           </div>
+           
+           <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password">
+                <span class="error" id="passwordError"></span>
+           </div>
+          
+           <div class="input-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password">
+                <span class="error" id="confirmPasswordError"></span>
+           </div>
+
+           <button type="submit" id="reg-btn">Register</button>
+       </form>
+   </div> 
+   <br/>
+
+    <div class="table-container">
+        <h2>Registered Customer</h2>
+        <table id="table">
+            <thead>
+                <tr>
+                    <th>Full Name</th>
+                     <th>Email</th>
+                </tr>
+            </thead>
+            <tbody id="table-body"></tbody>
+        </table>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>   <!-- jQuery CDN from Google -->
+    <script>
+
+        let usersArray = [];
+
+        $(document).ready(function(){
+            console.log("jQuery is ready!");
+            $('#form').submit(function(event){
+                // console.log('Form Submitted!');
+                event.preventDefault();
+
+            
+
+            if(isValidated()){
+                let user = {
+                fullName: $('#name').val(),  // val() is used to get the value of the input field
+                email: $('#email').val(),
+                password: $('#password').val(),
+                };
+                usersArray.push(user);
+                // console.log(usersArray);
+
+                addToTable(user);
+
+                $('#form')[0].reset(); // reset the form fields
+            }
+
+            function addToTable(user){
+                let newRow = ` <tr>
+                    <td>${user.fullName}</td>
+                    <td>${user.email}</td>
+                </tr>`;
+                $('#table-body').append(newRow);
+            }
+
+                function isValidated(){
+                    let fullName = $('#name').val();
+                    let email = $('#email').val();
+                    let password = $('#password').val();
+                    let confirmPassword = $('#confirm-password').val();
+                    isValid = true; // isValid -> if not inialize return false in the if-else
+
+                    // console.log(fullName);  // This will print the value of the input field in the console
+                    // console.log(email);
+                    // console.log(password);
+                    // console.log(confirmPassword);
+
+                    // fullName = undefined;
+                    // console.log(typeof fullName);  // This will print the type of the variable in the console
+
+                    if(!fullName){
+                        // console.log('Full Name is required!');
+                        $('#fullNameError').text('Please enter your full name!');
+                        isValid = false; // if the condition is not met, then isValid will be false
+                    }else{
+                        $('#fullNameError').text('');
+                    }
+
+                    if(!email){
+                        $('#emailError').text('Please enter your email!');
+                        isValid = false;
+                    }else{
+                        $('#emailError').text('');
+                    }
+
+                    if(!password){
+                        $('#passwordError').text('Please enter your password!');
+                        isValid = false;
+                    }else{
+                        $('#passwordError').text('');
+                    }
+
+                    if(!confirmPassword){
+                        $('#confirmPasswordError').text('Please confirm your password!'); 
+                        isValid = false;
+                    }else if(password !== confirmPassword){
+                        $('#confirmPasswordError').text('Passwords do not match!'); // This will show the error message if the passwords do not match
+                    }else{
+                        $('#confirmPasswordError').text('');
+                    }
+
+                    // if(password !== confirmPassword){     // ------> This is another way to check if the passwords match
+                    //     $('#confirmPasswordError').text('Passwords do not match!');
+                    // }
+                    return isValid;
+                }  
+
+            });
+        });
+            
+        
+    </script>
+
+</body>
+</html>

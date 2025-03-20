@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson-jQuery-basics</title>
+</head>
+<body>
+   <h1 id="heading">jQuery Basics</h1>
+    <p class="paragraph">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore nulla ullam tempore est suscipit voluptas 
+        vitae nemo laboriosam commodi vel, natus nobis a cupiditate optio earum itaque. Error, harum! Molestias natus 
+        dolor repellendus laudantium cupiditate dolores sequi distinctio totam, earum quaerat similique, ipsam voluptas 
+        commodi corporis. Perferendis, nostrum adipisci ratione corporis architecto illo accusamus accusantium unde optio 
+        minima earum sunt neque iure aspernatur voluptas reprehenderit quaerat qui quasi labore aliquid animi error enim. 
+        Doloremque obcaecati ipsum quasi dolorem cumque? Enim tempora officia cupiditate ex maxime repellat nisi. Eius dolore 
+        velit asperiores. Reprehenderit quae deserunt corrupti incidunt unde mollitia eius esse.
+    </p>
+
+    <p class="paragraph-2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore nulla ullam tempore est suscipit voluptas 
+        vitae nemo laboriosam commodi vel, natus nobis a cupiditate optio earum itaque. Error, harum! Molestias natus 
+        dolor repellendus laudantium cupiditate dolores sequi distinctio totam, earum quaerat similique, ipsam voluptas 
+        commodi corporis. Perferendis, nostrum adipisci ratione corporis architecto illo accusamus accusantium unde optio 
+        minima earum sunt neque iure aspernatur voluptas reprehenderit quaerat qui quasi labore aliquid animi error enim. 
+        Doloremque obcaecati ipsum quasi dolorem cumque? Enim tempora officia cupiditate ex maxime repellat nisi. Eius dolore 
+        velit asperiores. Reprehenderit quae deserunt corrupti incidunt unde mollitia eius esse.
+    </p>
+
+    <button id="btn">Click Here !</button>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>   <!-- jQuery CDN from Google -->
+    <script>
+        $(document).ready( function() {
+            // console.log("jQuery is ready!");
+            $('#heading').css('color', 'red'); // Change the color of the heading to red
+            $('.paragraph').css('background-color', 'lightblue');
+
+            $('#btn').css('background-color', 'green'). css('color', 'white');
+            $('#btn').click(function(){
+                // alert('Button Clicked!');
+
+                $('p').hide();  // This will hide the paragraph
+                // $('p').toggle(); // This will toggle the paragraph
+                // $('p').fadeOut();  // This will fade out the paragraph
+                // $('p').fadeToggle(); // This will fade toggle the paragraph  (toggle-> fade in and fade out)
+            });
+
+            // $( "#btn" ).on( "click", function() {    // This is another way to add event listener
+            // alert( "Handler for `click` called." );
+            // } );
+
+            function handlerIn(){
+                $(this).css('background-color', 'yellow');
+            }
+
+            function handlerOut(){
+                $(this).css('background-color', 'white');
+            }
+
+            $('.paragraph-2').on('mouseenter', handlerIn).on('mouseleave', handlerOut);
+        });
+    </script>
+</body>
+</html>
